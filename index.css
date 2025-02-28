@@ -1,0 +1,165 @@
+/* Estilos generales para la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b5c; /* Fondo oscuro */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #1b1b5c, #3c3c8c); /* Sutil gradiente */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más fuerte */
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    color: #4c6faf; /* Mantener color azul */
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Caja de texto para comentarios */
+.comment-box {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+    background-color: #f4f4f9; /* Fondo claro */
+    transition: border-color 0.3s ease;
+}
+
+.comment-box:focus {
+    border-color: #4c6faf; /* Cambiar borde al enfocarse */
+    outline: none;
+}
+
+/* Botones */
+button {
+    background-color: #4c6faf;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3a579f; /* Un tono más oscuro al hacer hover */
+    transform: translateY(-2px); /* Efecto de levitación */
+}
+
+button:active {
+    transform: translateY(2px); /* Efecto de presionar el botón */
+}
+
+/* Estilos para la lista de comentarios */
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.comment-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comment-list li:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.comment-list li p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Botón de eliminar en los comentarios */
+.comment-list li button {
+    background-color: #ff4040;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-list li button:hover {
+    background-color: #e63946; /* Tono más oscuro */
+}
+
+/* Estilos para el botón de borrar todos */
+button.delete-all {
+    background-color: #f44336;
+    margin-top: 20px;
+}
+
+button.delete-all:hover {
+    background-color: #e53935; /* Tono más oscuro */
+}
+
+/* Estilos para el campo de nombre de usuario */
+.username-input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f4f4f9; /* Fondo claro */
+    transition: border-color 0.3s ease;
+}
+
+.username-input:focus {
+    border-color: #4c6faf; /* Cambiar borde al enfocarse */
+    outline: none;
+}
+
+/* Mejorar el diseño móvil */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .comment-box, .username-input {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
